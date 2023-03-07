@@ -1,4 +1,5 @@
-export const base_url = "https://strix-bob-prep-quiz-module.herokuapp.com/api";
+// export const base_url = "https://strix-bob-prep-quiz-module.herokuapp.com/api";
+export const base_url = "https://dental-back.onrender.com/api";
 
 export const getDashboardData = (callBack) => {
   //   var formdata = new FormData();

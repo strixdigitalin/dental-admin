@@ -63,10 +63,7 @@ export const newAddMCQ = (payload, callBack) => {
     redirect: "follow",
   };
 
-  fetch(
-    "https://strix-bob-prep-quiz-module.herokuapp.com/api/addquestion",
-    requestOptions
-  )
+  fetch(base_url + "/addquestion", requestOptions)
     .then((response) => response.text())
     .then((result) => {
       callBack(JSON.parse(result));

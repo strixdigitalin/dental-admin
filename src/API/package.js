@@ -71,10 +71,7 @@ export const newaddPackage = (name, callBack) => {
     redirect: "follow",
   };
 
-  fetch(
-    "https://strix-bob-prep-quiz-module.herokuapp.com/api/addpackage",
-    requestOptions
-  )
+  fetch(base_url + "/addpackage", requestOptions)
     .then((response) => response.text())
     .then((result) => {
       callBack(result);

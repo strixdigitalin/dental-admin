@@ -96,10 +96,13 @@ export default function Login() {
   const loginSubmit = async () => {
     try {
       console.log(formValue, "<<<<formVAlue");
-      const { data } = await axios.post(`${BACKEND_URL}/api/v1/auth/login`, {
-        email: formValue.email,
-        password: formValue.password,
-      });
+      const { data } = await axios.post(
+        `${BACKEND_URL}/api/v1/adminAuth/login`,
+        {
+          email: formValue.email,
+          password: formValue.password,
+        }
+      );
       localStorage.setItem(DENTAL_ADMIN_USER, JSON.stringify(data.data.user));
       localStorage.setItem(DENTAL_ADMIN_TOKEN, data.data.tokenRes.access_token);
       console.log("<<<type", data, "<<<daata");
