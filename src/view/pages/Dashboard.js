@@ -74,7 +74,17 @@ export default function Dashboard() {
   return (
     <div className={classes.root}>
       <div className={classes.cardCont}>
-        <Card
+        <div
+          style={{
+            background: "#EBD9D8",
+            width: "100%",
+            padding: "15px",
+            textAlign: "center",
+          }}
+        >
+          Welcome to Admin Panel
+        </div>
+        {/* <Card
           icon={PersonIcon}
           label="Number of categories"
           number={LandingData?.total_category}
@@ -88,7 +98,7 @@ export default function Dashboard() {
           icon={PersonIcon}
           label="Number of test"
           number={LandingData?.total_test}
-        />
+        /> */}
         {/* <div></div> */}
 
         {/* <Card icon={PersonIcon} label="Active Users" number={0} /> */}
