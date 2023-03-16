@@ -35,7 +35,7 @@ const useCardStyles = makeStyles((theme) => ({
   },
 }));
 
-const Card = ({ icon: Icon, label, number }) => {
+const Card = ({ icon: Icon, label, number = "" }) => {
   const classes = useCardStyles();
 
   return (
@@ -82,7 +82,7 @@ export default function Dashboard() {
             textAlign: "center",
           }}
         >
-          Welcome to Admin Panel
+          <Card icon={PersonIcon} label="Welcome to Admin Panel" />
         </div>
         {/* <Card
           icon={PersonIcon}
@@ -104,7 +104,7 @@ export default function Dashboard() {
         {/* <Card icon={PersonIcon} label="Active Users" number={0} /> */}
       </div>
       <div className={classes.cardCont}>
-        <Card
+        {/* <Card
           icon={PersonIcon}
           label="Number of Test available"
           number={LandingData?.total_packages}
@@ -113,7 +113,7 @@ export default function Dashboard() {
           icon={PersonIcon}
           label="Number of Subjects"
           number={LandingData?.total_subject}
-        />
+        /> */}
         {/* <div></div> */}
 
         {/* <Card icon={PersonIcon} label="Active Users" number={0} /> */}
